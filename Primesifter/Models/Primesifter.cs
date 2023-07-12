@@ -11,7 +11,9 @@ namespace PrimesifterPractice.Models {
 
         // sift primes using Sieve of Eratosthenes method
         public List<int> SiftPrimesToN(int userMaxValue) {
+            // generate list of ints from 2 to user provided int value
             PopulateSifterList(userMaxValue);
+
             
             return sifterList;
         }

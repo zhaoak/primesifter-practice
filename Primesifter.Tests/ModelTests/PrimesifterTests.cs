@@ -29,5 +29,31 @@ namespace PrimesifterPractice.Tests
             // test
             CollectionAssert.AreEqual(testSifter.GetSifterList(), expectedList);
         }
+
+        [TestMethod]
+        public void Primesifter_CorrectlySiftsPrimes_List() {
+            // run sifter
+            Primesifter testSifter = new Primesifter();
+
+            // expected output list of primes
+            List<int> correctPrimeList = new List<int>();
+            correctPrimeList.Add(2);
+            correctPrimeList.Add(3);
+            correctPrimeList.Add(5);
+            correctPrimeList.Add(7);
+            correctPrimeList.Add(11);
+            correctPrimeList.Add(13);
+            correctPrimeList.Add(17);
+            correctPrimeList.Add(19);
+            correctPrimeList.Add(23);
+            correctPrimeList.Add(29);
+            correctPrimeList.Add(31);
+            correctPrimeList.Add(37);
+            correctPrimeList.Add(41);
+            correctPrimeList.Add(43);
+            correctPrimeList.Add(47);
+
+            CollectionAssert.AreEqual(testSifter.SiftPrimesToN(50), correctPrimeList);
+        }
     }
 }
