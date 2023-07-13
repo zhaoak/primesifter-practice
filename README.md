@@ -3,6 +3,8 @@ C# console application that finds prime numbers between 0 and n using the
 [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) 
 method
 
+**Currently broken**
+
 ## Author
 Allie Zhao
 
