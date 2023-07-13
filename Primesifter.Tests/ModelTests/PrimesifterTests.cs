@@ -34,6 +34,7 @@ namespace PrimesifterPractice.Tests
         public void Primesifter_CorrectlySiftsPrimes_List() {
             // run sifter
             Primesifter testSifter = new Primesifter();
+            List<int> sifterOutput = testSifter.SiftPrimesToN(50);
 
             // expected output list of primes
             List<int> correctPrimeList = new List<int>();
@@ -52,8 +53,14 @@ namespace PrimesifterPractice.Tests
             correctPrimeList.Add(41);
             correctPrimeList.Add(43);
             correctPrimeList.Add(47);
+            
+            Console.WriteLine("Primesifter Output:");
+            foreach (int num in sifterOutput)
+            {
+                Console.WriteLine(num);
+            }
 
-            CollectionAssert.AreEqual(testSifter.SiftPrimesToN(50), correctPrimeList);
+            CollectionAssert.AreEqual(sifterOutput, correctPrimeList);
         }
     }
 }
